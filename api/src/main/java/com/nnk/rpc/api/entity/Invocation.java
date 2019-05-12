@@ -9,6 +9,13 @@ public class Invocation implements Serializable {
     private Class[] paramtypes;
     private Object[] objects;
 
+    /**
+     *
+     * @param interfaceName 接口名字
+     * @param methodName 方法名字
+     * @param paramtypes 参数类型列表
+     * @param objects 参数列表
+     */
     public Invocation(String interfaceName, String methodName, Class[] paramtypes, Object[] objects) {
         this.interfaceName = interfaceName;
         this.methodName = methodName;

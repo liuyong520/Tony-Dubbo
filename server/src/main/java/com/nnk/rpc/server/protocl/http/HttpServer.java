@@ -1,5 +1,6 @@
 package com.nnk.rpc.server.protocl.http;
 
+import com.nnk.rpc.server.protocl.RpcServer;
 import org.apache.catalina.*;
 import org.apache.catalina.connector.Connector;
 import org.apache.catalina.core.StandardContext;
@@ -7,7 +8,7 @@ import org.apache.catalina.core.StandardEngine;
 import org.apache.catalina.core.StandardHost;
 import org.apache.catalina.startup.Tomcat;
 
-public class HttpServer {
+public class HttpServer implements RpcServer {
 
     public void start(String hostName,int port){
         Tomcat tomcat = new Tomcat();

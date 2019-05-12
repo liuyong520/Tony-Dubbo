@@ -39,11 +39,25 @@ public class RemoterMapRegister implements RemoteRegister {
         return list.get(i);
     }
 
+    /**
+     * 写入文件
+     * @param path
+     * @param object
+     * @throws IOException
+     */
     private void saveFile(String path,Object object) throws IOException {
         FileOutputStream fileOutputStream = new FileOutputStream(new File(path));
         ObjectOutputStream objectOutputStream =new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(object);
     }
+
+    /**
+     * 从文件中读取
+     * @param path
+     * @return
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
     private Object readFile(String path) throws IOException, ClassNotFoundException {
         FileInputStream fileInputStream = new FileInputStream(new File(path));
         ObjectInputStream inputStream = new ObjectInputStream(fileInputStream);
