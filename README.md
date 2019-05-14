@@ -454,7 +454,6 @@ public class ProxyFactory {
 至此Dubbo的RPC调用核心框架就已经基本实现了。
 涉及到的东西其实挺多的，有tomcat的知识（http协议实现），协议的序列化和反序列化（远程调用消息的传递），netty的知识（dubbo协议的实现），动态代理的知识（消费者端实现）。反射（远程调用的核心）。再深入点就是负载均衡算法（在远程获取服务者的地址时可以抽象）。
 
-更完整的代码请去我的github上下载 [Dubbo-tony](https://github.com/liuyong520/myRPC)
 如果有什么不清楚的地方，欢迎大家留言，咱们可以一起交流讨论。
 
 
